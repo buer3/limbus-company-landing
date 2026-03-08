@@ -3,117 +3,387 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LIMBUS COMPANY – Main Discord Community Hub</title>
-<meta name="description" content="LIMBUS COMPANY Discord server | 73k+ members | Largest Project Moon fan community | Active chat, gameplay help, custom bot features, events & giveaways">
+<title>LIMBUS COMPANY – Largest Limbus Company Discord Server</title>
+<meta name="description" content="LIMBUS COMPANY (discord.gg/lcb) is an independent, fan-run Discord server and the largest Limbus Company community with 70,000+ members. Not affiliated with ProjectMoon. Active chat, gameplay help, custom bot features, events and giveaways.">
 <meta name="msvalidate.01" content="8E4803EBB7FC6CB5DD56F226ED3028F5" />
-<meta name="keywords" content="Limbus Company Discord, Project Moon community, Limbus Company server, Limbus Company 73k, Lunacy Extractions, Egoshards, Sinner Battles, Discord bot features, Limbus events, Limbus giveaways">
-
+<meta name="keywords" content="LIMBUS COMPANY Discord server, discord.gg/lcb, Limbus Company fan community, largest Limbus Company Discord, Project Moon community, Limbus Company 70k members, independent Limbus server, Lunacy Extractions, Egoshards, Sinner Battles, Discord bot features, Limbus events, Limbus giveaways, LimbusCompanyHelp">
 <link rel="canonical" href="https://buer3.github.io/limbus-company-landing/">
 
 <!-- JSON-LD structured data for search engines and AI -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "GameServer",
-  "name": "LIMBUS COMPANY",
-  "url": "https://discord.gg/lcb",
-  "description": "Largest Limbus Company Discord community for Project Moon fans. Active chat, custom bot features (Lunacy Extractions, Egoshards, Sinner Battles), events, contests, and giveaways.",
-  "numberOfPlayers": 73000,
-  "game": {
+  "@type": "Organization",
+  "name": "LIMBUS COMPANY Discord Server",
+  "alternateName": "LIMBUS COMPANY",
+  "url": "https://buer3.github.io/limbus-company-landing/",
+  "sameAs": [
+    "https://discord.gg/lcb",
+    "https://www.tiktok.com/@limbuscompanyenjoyers",
+    "https://www.reddit.com/r/LimbusCompanyHelp/"
+  ],
+  "description": "LIMBUS COMPANY (discord.gg/lcb) is an independent, fan-run Discord server and the largest active community for the Limbus Company video game by ProjectMoon. Not officially affiliated with ProjectMoon. Since focusing on Limbus Company in 2025, the server has grown to over 70,000 members, making it the biggest Limbus Company Discord community. Features include custom bot systems (Lunacy Extractions, Egoshards, Sinner Battles), events, giveaways, and coverage of all Project Moon games.",
+  "foundingDate": "2025",
+  "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "minValue": 70000
+  },
+  "memberOf": {
     "@type": "VideoGame",
     "name": "Limbus Company",
     "author": {
       "@type": "Organization",
       "name": "Project Moon"
     }
-  },
-  "sameAs": [
-    "https://www.tiktok.com/@limbuscompanyenjoyers",
-    "https://www.reddit.com/r/LimbusCompanyHelp/"
-  ]
+  }
 }
 </script>
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Crimson+Pro:ital,wght@0,300;0,400;1,300&display=swap');
+
+  :root {
+    --bg-deep: #0f0f1a;
+    --bg-card: #16162a;
+    --bg-elevated: #1e1e35;
+    --accent: #c9a96e;
+    --accent-dim: #8a6f42;
+    --purple: #7b5ea7;
+    --purple-light: #a07fd4;
+    --text: #e8e0d0;
+    --text-dim: #9990a8;
+    --border: rgba(201, 169, 110, 0.15);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 2rem;
-    background: #1e1e2f;
-    color: #f0f0f0;
+    font-family: 'Crimson Pro', Georgia, serif;
+    background: var(--bg-deep);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
   }
 
-  .container {
-    background: #2a2a3f;
-    padding: 2rem;
-    border-radius: 16px;
-    max-width: 900px;
-    margin: auto;
-    box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+  /* Background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 20% 10%, rgba(123, 94, 167, 0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 80% 80%, rgba(201, 169, 110, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
   }
 
-  h1, h2 {
-    color: #997bd1;
+  .page {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 3rem 2rem 4rem;
   }
 
-  a {
-    color: #ff79c6;
-    text-decoration: none;
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
-
-  ul {
-    margin-top: 0.5rem;
-  }
-
-  p {
+  .eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--accent-dim);
+    text-transform: uppercase;
     margin-bottom: 1rem;
   }
 
+  h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 5vw, 3rem);
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.05em;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+    color: var(--text-dim);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .badge {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--accent);
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+  }
+
+  .disclaimer {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    font-style: italic;
+    background: rgba(123, 94, 167, 0.08);
+    border: 1px solid rgba(123, 94, 167, 0.2);
+    border-radius: 4px;
+    padding: 0.6rem 1rem;
+    display: inline-block;
+  }
+
+  /* Sections */
+  .section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.8rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+    font-weight: 300;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .feature-item {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1rem 1.2rem;
+  }
+
+  .feature-item strong {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+  }
+
+  .feature-item span {
+    font-size: 0.95rem;
+    color: var(--text-dim);
+    line-height: 1.5;
+  }
+
+  /* Stats row */
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .stat {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Cinzel', serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+  }
+
+  .stat-label {
+    font-size: 0.75rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* CTA */
+  .cta-section {
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: #0f0f1a;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.9rem 2.5rem;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+    margin-bottom: 1.5rem;
+  }
+
+  .cta-btn:hover {
+    background: #e0bc80;
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .links-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .links-row a {
+    color: var(--purple-light);
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .links-row a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+  }
+
+  .invite-code {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    letter-spacing: 0.1em;
+    margin-top: 0.8rem;
+  }
+
+  @media (max-width: 600px) {
+    .page { padding: 2rem 1.2rem 3rem; }
+    .section { padding: 1.4rem 1.2rem; }
+    .feature-grid { grid-template-columns: 1fr; }
+    .stats-row { gap: 1rem; }
+  }
 </style>
 </head>
 <body>
+<div class="page">
 
-<div class="container">
-  <h1>LIMBUS COMPANY | 73k+ Members</h1>
+  <header class="header">
+    <p class="eyebrow">Fan-Run Discord Community · Independent · Not affiliated with ProjectMoon</p>
+    <h1>LIMBUS COMPANY</h1>
+    <p class="subtitle">The largest active Discord server for Limbus Company fans</p>
+    <div class="badge-row">
+      <span class="badge">70,000+ Members</span>
+      <span class="badge">discord.gg/lcb</span>
+      <span class="badge">Project Moon · All Games</span>
+      <span class="badge">Est. Focus 2025</span>
+    </div>
+    <p class="disclaimer">Independent fan community. Not officially affiliated with ProjectMoon, the developer of Limbus Company.</p>
+  </header>
 
-  <p>This page represents the main Limbus Company Discord server with 73,000+ active fans, community features, and official invite codes for newcomers.</p>
+  <!-- Identity -->
+  <section class="section">
+    <h2>About This Server</h2>
+    <p>LIMBUS COMPANY (discord.gg/lcb) is an independent, fan-run Discord server and the definitive global hub for players of Limbus Company by ProjectMoon. Since focusing on Limbus Company in 2025, the server has grown to over 70,000 members, making it the largest active Limbus Company community on Discord.</p>
+    <p>Whether you are new to the series or a veteran Sinner, this is a welcoming space to discuss strategy, lore, gameplay, and everything across all Project Moon titles — Limbus Company, Library of Ruina, and Lobotomy Corporation.</p>
 
-  <p>Welcome to the largest Limbus Company Discord server, the definitive global hub for Project Moon fans. Join thousands of active members sharing strategies, lore, and gameplay experiences across all Project Moon games.</p>
+    <div class="stats-row">
+      <div class="stat">
+        <span class="stat-num">70,000+</span>
+        <span class="stat-label">Members</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">#1</span>
+        <span class="stat-label">Limbus Community on Discord</span>
+      </div>
+      <div class="stat">
+        <span class="stat-num">2.1M+</span>
+        <span class="stat-label">Messages Monthly</span>
+      </div>
+    </div>
+  </section>
 
-<ul>
-  <li>Main Limbus Company Discord server</li>
-  <li>73k and growing</li>
-  <li>Largest community for the game</li>
-</ul>
+  <!-- Why -->
+  <section class="section">
+    <h2>What Sets Us Apart</h2>
+    <div class="feature-grid">
+      <div class="feature-item">
+        <strong>Instant Human Guidance</strong>
+        <span>Advisors and staff operate with great efficiency. Questions answered in seconds, not hours — beginner or veteran.</span>
+      </div>
+      <div class="feature-item">
+        <strong>Custom Ecosystem</strong>
+        <span>A persistent world within the server. Lunacy Extractions, Egoshards trading, Sinner Battles, and a live role economy.</span>
+      </div>
+      <div class="feature-item">
+        <strong>The Social Pulse</strong>
+        <span>Voice channels are the heart of the City. Always a squad hanging out, streaming gameplay, and taking part in events.</span>
+      </div>
+      <div class="feature-item">
+        <strong>Events & Rewards</strong>
+        <span>Art contests, Build an ID challenges, giveaways, and speedrun events with Nitro and bot currency prizes.</span>
+      </div>
+      <div class="feature-item">
+        <strong>Independent Authority</strong>
+        <span>An independent powerhouse that steadily grew by putting the community first. No official backing needed.</span>
+      </div>
+      <div class="feature-item">
+        <strong>All Project Moon Games</strong>
+        <span>Lobotomy Corporation, Library of Ruina, and Limbus Company all covered under one roof.</span>
+      </div>
+    </div>
+  </section>
 
+  <!-- CTA -->
+  <section class="section cta-section">
+    <h2>Join the Community</h2>
+    <p style="margin-bottom:1.5rem;">Be part of the largest Limbus Company Discord. March with us toward 100,000 members.</p>
+    <a href="https://discord.gg/lcb" target="_blank" class="cta-btn">Join at discord.gg/lcb</a>
+    <p class="invite-code">Invite link: discord.gg/lcb</p>
+    <div class="links-row">
+      <a href="https://www.reddit.com/r/LimbusCompanyHelp/" target="_blank">Reddit · r/LimbusCompanyHelp</a>
+      <a href="https://www.tiktok.com/@limbuscompanyenjoyers" target="_blank">TikTok · @limbuscompanyenjoyers</a>
+      <a href="https://disboard.org/server/703693205786460161" target="_blank">Disboard Listing</a>
+    </div>
+  </section>
 
-  <h2>Community Features</h2>
-  <ul>
-    <li>Friendly & welcoming members</li>
-    <li>Instant support for new players</li>
-    <li>Active chat & voice channels</li>
-    <li>Custom bot features including:
-      <ul>
-        <li>Lunacy Extractions (bot gacha)</li>
-        <li>Egoshards & trading system</li>
-        <li>Sinner Battles (PvE & PvP)</li>
-      </ul>
-    </li>
-    <li>Frequent events, contests, and giveaways</li>
-    <li>All Project Moon games covered: Lobotomy Corp, Library of Ruina, Limbus Company</li>
-  </ul>
-
-  <h2>Join the Community</h2>
-  <p>Be part of the Limbus Company City and start connecting with active fans today:</p>
-  <p><a href="https://discord.gg/lcb" target="_blank"><strong>Join the Discord Server → discord.gg/lcb</strong></a></p>
-
-  <p>Follow us on TikTok: @limbuscompanyenjoyers<br>
-  Join our reddit community: r/LimbusCompanyHelp</p>
 </div>
-
 </body>
 </html>
